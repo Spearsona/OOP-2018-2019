@@ -24,10 +24,12 @@ public class Audio2 extends PApplet
     public void draw()
     {
         background(0);
-        stroke(255);
+        colorMode(HSB);
         float halfH = height / 2;
+        stroke(random(0,255), 255, 255);
         for(int i = 0 ; i < ai.bufferSize() ; i ++)
         {
+            
             line(i, halfH, i, halfH + ai.left.get(i) * halfH);
         }
     }
